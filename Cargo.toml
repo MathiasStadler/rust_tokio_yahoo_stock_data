@@ -1,0 +1,6 @@
+[package]
+name = "rust_tokio_yahoo_stock_data"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
