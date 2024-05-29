@@ -31,16 +31,16 @@ const WEB_XPATH: &[&[&str]] = &[
         "1",
         ACTION_CLICK,
         "accept",
-        "/html/body/div[1]/div/div/div/div[2]/div/button[3]",
+        "/html/body/div/div/div/div/form/div[2]/div[2]/button[1]",
     ],
-    &["2",ACTION_FORM_FILL_FIELD,"TREX","/html/body/table[1]/tbody/tr[1]/td/table/tbody/tr/td[1]/table/tbody/tr[2]/td/div/label/div/input"],
-    &["3",ACTION_SCREENSHOT_WEB_ELEMENT,"chart_stock.png","/html/body/div[4]/div[3]/div[3]/div[1]/div/div[1]/div/div[2]/div/div[2]/canvas[2]"],
-    &["4",ACTION_SCREENSHOT_WEB_ELEMENT,"table_chart_data.png","/html/body/div[4]/div[3]/div[4]/table/tbody/tr/td/div/table[1]/tbody/tr/td/div[2]/table"],
-    &["5",ACTION_SCREENSHOT_WEB_ELEMENT,"table_income_statement.png","/html/body/div[4]/div[3]/div[4]/table/tbody/tr/td/div/table[2]/tbody/tr[11]/td/div/table[2]"],
-    &["6",ACTION_CLICK,"balance sheet","/html/body/div[4]/div[3]/div[4]/table/tbody/tr/td/div/table[2]/tbody/tr[11]/td/div/table[1]/tbody/tr/td[1]/span/a[2]"],
-    &["7",ACTION_SCREENSHOT_WEB_ELEMENT,"table_balance_sheet.png","/html/body/div[4]/div[3]/div[4]/table/tbody/tr/td/div/table[2]/tbody/tr[11]/td/div/table[2]"],
-    &["8",ACTION_CLICK,"cash_flow","/html/body/div[4]/div[3]/div[4]/table/tbody/tr/td/div/table[2]/tbody/tr[11]/td/div/table[1]/tbody/tr/td[1]/span/a[3]"],
-    &["9",ACTION_SCREENSHOT_WEB_ELEMENT,"table_cash_flow.png","/html/body/div[4]/div[3]/div[4]/table/tbody/tr/td/div/table[2]/tbody/tr[11]/td/div/table[2]"],
+    &["2",ACTION_FORM_FILL_FIELD,"TREX","/html/body/div[1]/header/div/div/div/div[2]/div/div[1]/div[3]/form/input[1]"],
+   // &["3",ACTION_SCREENSHOT_WEB_ELEMENT,"chart_stock.png","/html/body/div[4]/div[3]/div[3]/div[1]/div/div[1]/div/div[2]/div/div[2]/canvas[2]"],
+   // &["4",ACTION_SCREENSHOT_WEB_ELEMENT,"table_chart_data.png","/html/body/div[4]/div[3]/div[4]/table/tbody/tr/td/div/table[1]/tbody/tr/td/div[2]/table"],
+   // &["5",ACTION_SCREENSHOT_WEB_ELEMENT,"table_income_statement.png","/html/body/div[4]/div[3]/div[4]/table/tbody/tr/td/div/table[2]/tbody/tr[11]/td/div/table[2]"],
+   // &["6",ACTION_CLICK,"balance sheet","/html/body/div[4]/div[3]/div[4]/table/tbody/tr/td/div/table[2]/tbody/tr[11]/td/div/table[1]/tbody/tr/td[1]/span/a[2]"],
+   // &["7",ACTION_SCREENSHOT_WEB_ELEMENT,"table_balance_sheet.png","/html/body/div[4]/div[3]/div[4]/table/tbody/tr/td/div/table[2]/tbody/tr[11]/td/div/table[2]"],
+   // &["8",ACTION_CLICK,"cash_flow","/html/body/div[4]/div[3]/div[4]/table/tbody/tr/td/div/table[2]/tbody/tr[11]/td/div/table[1]/tbody/tr/td[1]/span/a[3]"],
+   // &["9",ACTION_SCREENSHOT_WEB_ELEMENT,"table_cash_flow.png","/html/body/div[4]/div[3]/div[4]/table/tbody/tr/td/div/table[2]/tbody/tr[11]/td/div/table[2]"],
 
 
     // => /html/body/div[4]/div[3]/div[4]/table/tbody/tr/td/div/table[2]/tbody/tr[11]/td/div/table[1]/tbody/tr/td[1]/span/a[3]
@@ -77,7 +77,8 @@ async fn run() -> color_eyre::Result<(), Box<dyn Error>> {
     let _place: &str = "Place";
     let _driver = initialize_driver().await?;
 
-    _driver.goto("https://finviz.com").await?;
+    //_driver.goto("https://finviz.com").await?;
+    _driver.goto("https://finance.yahoo.com").await?;
     thread::sleep(Duration::from_secs(2));
 
     search_location(&_driver, _place).await?;
