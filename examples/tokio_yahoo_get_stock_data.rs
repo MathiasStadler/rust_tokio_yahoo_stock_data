@@ -34,6 +34,20 @@ const WEB_XPATH: &[&[&str]] = &[
         "/html/body/div/div/div/div/form/div[2]/div[2]/button[1]",
     ],
     &["2",ACTION_FORM_FILL_FIELD,"TREX","/html/body/div[1]/header/div/div/div/div[2]/div/div[1]/div[3]/form/input[1]"],
+    // 
+    &[
+        "3",
+        ACTION_CLICK,
+        "IGNORE_DATA_FIELD",
+        "/html/body/div[1]/main/section/section/aside/section/nav/ul/li[6]/a",
+    ],
+    //
+    &[
+        "4",
+        ACTION_CLICK,
+        "IGNORE_DATA_FIELD",
+        "/html/body/div[1]/main/section/section/section/article/div[1]/div[2]/div/a",
+    ],
    // &["3",ACTION_SCREENSHOT_WEB_ELEMENT,"chart_stock.png","/html/body/div[4]/div[3]/div[3]/div[1]/div/div[1]/div/div[2]/div/div[2]/canvas[2]"],
    // &["4",ACTION_SCREENSHOT_WEB_ELEMENT,"table_chart_data.png","/html/body/div[4]/div[3]/div[4]/table/tbody/tr/td/div/table[1]/tbody/tr/td/div[2]/table"],
    // &["5",ACTION_SCREENSHOT_WEB_ELEMENT,"table_income_statement.png","/html/body/div[4]/div[3]/div[4]/table/tbody/tr/td/div/table[2]/tbody/tr[11]/td/div/table[2]"],
